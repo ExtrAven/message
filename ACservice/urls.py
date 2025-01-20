@@ -23,7 +23,7 @@ from . import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("acservice.urls")),  # Importing the URLs from acservice app)
+    path("", include("main.urls")),  # Importing the URLs from main app)
 ]
 
 if settings.DEBUG:

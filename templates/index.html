@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %} {% block content %}
+<div class="container">
+  <form class="mb-3" method="POST">
+    {% csrf_token %}
+    <label class="form-label" for="username"
+      >Ingresa tu nombre: (da igual que me lo sepa jskjskjs):</label
+    >
+    <input
+      class="form-control"
+      type="text"
+      id="username"
+      name="username"
+      required
+    />
+    <button class="btn btn-primary mt-3" type="submit">Aceptar</button>
+  </form>
+
+  {% if message %}
+  <h1 class="text-center">Hola {{message}} :)</h1>
+  <p class="text-center">bueno, oficialmente apareces en una pagina web 😃❤️</p>
+  {% endif %}
+</div>
+{% endblock content %}
