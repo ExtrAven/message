@@ -4,5 +4,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    message = request.POST.get("username")
-    return render(request, "index.html", {"message": message})
+    return render(request, "index.html")
